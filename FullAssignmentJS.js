@@ -29,19 +29,6 @@ function printPattern(n, i = n) {
   printPattern(n, i - 1);
 }
 
-
-function buildRow(i, j, direction) {
-  if (direction === "down") {
-    if (j === 0) return ""; 
-    return j + " " + buildRow(i, j - 1, "down");
-  } else if (direction === "up") {
-    if (j > i) return "";
-    return j + " " + buildRow(i, j + 1, "up");
-  } else if (direction === "switch") {
-    return buildRow(i, 2, "up"); 
-  }
-}
-
 function buildRow(i, j = i, direction = "down") {
   if (direction === "down") {
     if (j === 0) return ""; 
@@ -402,4 +389,5 @@ if (atm.authenticate(1234)) {
 } else {
   console.log("Invalid PIN!");
 }
+
 
