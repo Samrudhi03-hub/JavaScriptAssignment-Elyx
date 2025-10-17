@@ -45,16 +45,24 @@ printPattern(5);
 
 // 1.3. Find the Nth Digit in a Number Sequence
 
-function findNthDigit(N) {
-  let sequence = "";
-  let num = 1;
+// function findNthDigit(N) {  //N= 11
+//   let sequence = "";
+//   let num = 1;
 
-  while (sequence.length < N) {
-    sequence += num; // keep adding numbers as strings
-    num++;
-  }
+//   while (sequence.length < N) {
+//     sequence += num; // keep adding numbers as strings
+//     num++;
+//   }
 
-  console.log(`The ${N}th digit is: ${sequence[N - 1]}`);
+//   console.log(`The ${N}th digit is: ${sequence[N - 1]}`);
+// }
+
+// or
+
+function findNthDigit(N) {  //N= 11
+  let sequence = "1234567891011";
+
+  console.log(`The ${N}th digit is: ${sequence[N-1]}`);
 }
 
 findNthDigit(11);
